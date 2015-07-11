@@ -13,6 +13,7 @@ var dbs = make([]*DB, 0)
 
 func init() {
 	// right here we can disable and configure dialects based on environment variables
+	// that should also work with goconvey webinterface
 	dbs = append(dbs, &DB{Dialect: &WorkingDialect{}})
 	dbs = append(dbs, &DB{Dialect: &BrokenDialect{}})
 }
